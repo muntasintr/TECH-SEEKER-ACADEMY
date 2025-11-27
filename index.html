@@ -113,14 +113,15 @@
             box-shadow: 0 0 30px rgba(168, 85, 247, 0.6), 0 0 50px rgba(168, 85, 247, 0.4);
         }
         
-        /* --- ADDED: Tool card glow --- */
+        /* --- Tool card glow --- */
         .tool-card-glow {
-            box-shadow: 0 0 15px rgba(34, 197, 94, 0.3); /* Green glow */
+            box-shadow: 0 0 10px rgba(34, 197, 94, 0.2); 
+            border: 1px solid rgba(34, 197, 94, 0.3);
         }
         .tool-card-glow:hover {
-            box-shadow: 0 0 30px rgba(34, 197, 94, 0.6), 0 0 50px rgba(34, 197, 94, 0.4);
+            box-shadow: 0 0 25px rgba(34, 197, 94, 0.5); 
+            border-color: rgba(34, 197, 94, 0.8);
         }
-        /* --- END ADDED --- */
         
         /* FAQ accordion styles */
         .faq-item summary {
@@ -132,11 +133,11 @@
             color: #a855f7; /* Purple color when open */
         }
 
-        /* ***** UPDATED: Styles for Image and FAQ overlay animation ***** */
+        /* Image and FAQ overlay animation */
         .image-fader .fader-item {
             position: absolute;
             inset: 0;
-            transition: opacity 0.7s ease-in-out; /* Faster transition */
+            transition: opacity 0.7s ease-in-out;
         }
         .image-fader .faq-overlay {
             opacity: 0;
@@ -244,7 +245,7 @@
             background-color: rgba(31, 41, 55, 0.85) !important;
         }
 
-        /* --- UPDATED: Styles for Promo Video (Mobile First) --- */
+        /* --- Styles for Promo Video (Mobile First) --- */
         .promo-video-container {
             width: 100%;
             max-width: 24rem; /* max-w-sm */
@@ -325,16 +326,11 @@
                 transform: translateX(0);
             }
         }
-
-        /* --- ADDED: Tool card glow --- */
-        .tool-card-glow {
-            box-shadow: 0 0 15px rgba(34, 197, 94, 0.3); /* Green glow */
+        
+        /* Combo Text Glow */
+        .combo-text-glow {
+            text-shadow: 0 0 8px rgba(240, 171, 252, 0.6);
         }
-        .tool-card-glow:hover {
-            box-shadow: 0 0 30px rgba(34, 197, 94, 0.6), 0 0 50px rgba(34, 197, 94, 0.4);
-        }
-        /* --- END ADDED --- */
-
     </style>
 
     <script>
@@ -444,78 +440,122 @@
             </div>
         </section>
 
-        <!-- --- ADDED: AI Tools Section --- -->
+        <!-- --- MODIFIED: AI Tools Section (Updated Glow, Text, Colors, Images) --- -->
         <section id="ai-tools" class="mb-20">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 font-bangla breathing-heading"><span class="text-green-400">AI</span> টুলস</h2>
-            <!-- Grid layout for tool cards -->
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 font-bangla breathing-heading"><span class="text-green-400">AI</span> টুলস</h2>
+            
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <!-- Tool Card 1: Ultimate AI Automationer -->
-                <div class="bg-gray-900 border border-green-900 rounded-xl overflow-hidden card-glow tool-card-glow">
-                    
-                    <!-- Promo Video: Using the ID you provided -->
-                    <div class="relative w-full aspect-w-16 aspect-h-9">
-                        <iframe src="https://www.youtube.com/embed/Ei4vQgEeKbo" title="Tool Promo Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full object-cover"></iframe>
+                <!-- Card 1: Ultimate AI Automationer (COMBO) -->
+                <div class="bg-gray-900 rounded-xl overflow-hidden card-glow tool-card-glow flex flex-col relative border border-green-900">
+                    <div class="absolute top-0 right-0 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg z-10 animate-pulse">BEST VALUE</div>
+                    <div class="aspect-w-16 bg-black">
+                        <!-- Video or Main Image -->
+                        <iframe src="https://www.youtube.com/embed/Ei4vQgEeKbo?controls=1&rel=0&playsinline=1&modestbranding=1" title="Ultimate Tool" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
 
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-3">Ultimate AI Automationer</h3>
-                        <p class="text-gray-300 font-bangla text-sm mb-4 h-16">এটি একটি অল-ইন-ওয়ান অটোমেশন টুল, যা আপনার কনটেন্ট তৈরির ৮০% কাজ কমিয়ে দেবে!</p>
-                        <div class="flex items-baseline justify-between my-4">
-                             <!-- Price and duration -->
-                             <p class="text-3xl font-bold text-green-400">৳২৯৯৯ <span class="text-lg font-normal text-gray-400">/ লাইফটাইম</span></p>
-                        </div>
+                    <div class="p-5 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold text-cyan-400 mb-2 uppercase">ULTIMATE AI AUTOMATIONER</h3>
+                        <p class="text-gray-300 font-bangla text-sm mb-3">এটি একটি অল-ইন-ওয়ান অটোমেশন টুল, যা আপনার কনটেন্ট তৈরির ৮০% কাজ কমিয়ে দেবে!</p>
                         
-                        <!-- Link to the payment page you provided -->
-                        <a href="uaa-payment.html" class="course-link block w-full text-white font-bold text-center py-3 px-6 mt-4 rounded-lg hover:bg-green-600 transition-all duration-300 transform hover:scale-105 glowing-green-btn">
-                            বিস্তারিত দেখুন ও সাবস্ক্রাইব করুন
-                        </a>
+                        <!-- Combo Offer Text - Updated Glow for Clarity -->
+                        <div class="bg-gray-800/50 p-3 rounded-lg border border-purple-500/30 mb-4">
+                            <p class="text-xs text-gray-400 font-bold mb-1">🔥 স্পেশাল কম্বো অফার - সাথে ফ্রি পাচ্ছেন:</p>
+                            <ul class="text-sm font-bold space-y-1">
+                                <li class="text-green-400 combo-text-glow flex items-center">
+                                    <span class="mr-2">✨</span> PROMPT TO IMAGE UNLIMITED
+                                </li>
+                                <li class="text-orange-400 combo-text-glow flex items-center">
+                                    <span class="mr-2">🎙️</span> VOICE & SCRIPT STUDIO
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="mt-auto">
+                            <div class="flex items-baseline justify-between mb-4">
+                                <p class="text-3xl font-bold text-green-400">৳২,৯৯৯ <span class="text-sm font-normal text-gray-400">/ লাইফটাইম</span></p>
+                            </div>
+                            <a href="uaa-payment.html" class="block w-full text-white font-bold text-center py-3 rounded-lg glowing-green-btn transition-transform transform hover:scale-105 font-bangla">
+                                বিস্তারিত দেখুন এবং সাবস্ক্রিপশন কিনুন
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Tool Card 2: AI Thumbnail Generator (Placeholder) -->
-                <div class="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden card-glow tool-card-glow opacity-60">
-                    <!-- Placeholder image -->
-                    <div class="relative w-full aspect-w-16 aspect-h-9 bg-gray-800 flex items-center justify-center">
+                <!-- Card 2: Voice & Script Studio (Single) -->
+                <div class="bg-gray-900 rounded-xl overflow-hidden card-glow tool-card-glow flex flex-col border-t-4 border-cyan-500">
+                    <div class="aspect-w-16 bg-black">
+                        <!-- Updated Image Name: voice_tool.png -->
+                        <img src="voice_tool.png" onerror="this.onerror=null;this.src='https://placehold.co/800x450/0c111d/22d3ee.png?text=Voice+Studio';" alt="Voice & Script Studio" class="object-cover w-full h-full">
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold text-orange-500 mb-2 uppercase">VOICE & SCRIPT STUDIO</h3>
+                        <p class="text-gray-300 font-bangla text-sm mb-4">অটোমেটেড স্ক্রিপ্ট জেনারেশন এবং হাই-কোয়ালিটি ভয়েসওভার তৈরির জন্য পারফেক্ট টুল।</p>
+                        
+                        <div class="mt-auto">
+                            <div class="flex items-baseline justify-between mb-4">
+                                <p class="text-3xl font-bold text-white">৳৪৯৯ <span class="text-sm font-normal text-gray-400">/ লাইফটাইম</span></p>
+                            </div>
+                            <a href="voice-payment.html" class="block w-full bg-cyan-600 hover:bg-cyan-700 text-white font-bold text-center py-3 rounded-lg transition-all font-bangla">
+                                এখনই কিনুন
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Prompt to Image Unlimited (Single) -->
+                <div class="bg-gray-900 rounded-xl overflow-hidden card-glow tool-card-glow flex flex-col border-t-4 border-purple-500">
+                    <div class="aspect-w-16 bg-black">
+                        <!-- Updated Image Name: image_tool.png -->
+                        <img src="image_tool.png" onerror="this.onerror=null;this.src='https://placehold.co/800x450/0c111d/a855f7.png?text=Image+Tool';" alt="Prompt to Image Unlimited" class="object-cover w-full h-full">
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold text-green-500 mb-2 uppercase">PROMPT TO IMAGE UNLIMITED</h3>
+                        <p class="text-gray-300 font-bangla text-sm mb-4">আনলিমিটেড ইমেজ জেনারেশন প্রম্পট তৈরি করুন এবং আপনার ভিডিওর সিন ভিজ্যুয়ালাইজ করুন।</p>
+                        
+                        <div class="mt-auto">
+                            <div class="flex items-baseline justify-between mb-4">
+                                <p class="text-3xl font-bold text-white">৳৪৯৯ <span class="text-sm font-normal text-gray-400">/ লাইফটাইম</span></p>
+                            </div>
+                            <a href="image-payment.html" class="block w-full bg-purple-600 hover:bg-purple-700 text-white font-bold text-center py-3 rounded-lg transition-all font-bangla">
+                                এখনই কিনুন
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TBA Cards (Moved Down) -->
+                <!-- Card 4: AI Thumbnail Generator -->
+                <div class="bg-gray-900/60 border border-gray-800 rounded-xl overflow-hidden opacity-70 hover:opacity-100 transition-opacity">
+                    <div class="aspect-w-16 bg-gray-800 flex items-center justify-center">
                         <img src="https://api.dicebear.com/8.x/shapes/svg?seed=Thumbnail&scale=85&radius=10&backgroundType=gradientLinear&backgroundColor=22c55e,0c111d" alt="AI Thumbnail Generator" class="w-full h-48 object-cover">
-                        <span class="absolute text-white font-bold text-lg font-bangla">শীঘ্রই আসছে...</span>
+                        <span class="absolute text-white font-bold text-xl font-bangla bg-black/50 px-3 py-1 rounded">COMING SOON</span>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-3">AI Thumbnail Generator</h3>
-                        <p class="text-gray-300 font-bangla text-sm mb-4 h-16">এক ক্লিকে আপনার ভিডিওর জন্য আকর্ষণীয় থাম্বনেইল তৈরি করুন।</p>
-                        <div class="flex items-baseline justify-between my-4">
-                             <p class="text-3xl font-bold text-green-400">৳TBA <span class="text-lg font-normal text-gray-400">/ মাস</span></p>
-                        </div>
-                        <!-- Disabled button -->
-                        <a href="#" class="cursor-not-allowed block w-full bg-gray-700 text-gray-400 font-bold text-center py-3 px-6 mt-4 rounded-lg">
-                            শীঘ্রই আসছে
-                        </a>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-gray-400 mb-2 uppercase">AI THUMBNAIL GENERATOR</h3>
+                        <p class="text-gray-500 font-bangla text-xs mb-3">এক ক্লিকে আপনার ভিডিওর জন্য আকর্ষণীয় থাম্বনেইল তৈরি করুন।</p>
+                        <p class="text-xl font-bold text-gray-600">৳TBA</p>
+                        <button class="w-full bg-gray-800 text-gray-500 font-bold py-2 mt-3 rounded cursor-not-allowed">শীঘ্রই আসছে</button>
                     </div>
                 </div>
 
-                <!-- Tool Card 3: AI SEO Helper (Placeholder) -->
-                <div class="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden card-glow tool-card-glow opacity-60">
-                    <!-- Placeholder image -->
-                    <div class="relative w-full aspect-w-16 aspect-h-9 bg-gray-800 flex items-center justify-center">
+                <!-- Card 5: AI SEO Helper -->
+                <div class="bg-gray-900/60 border border-gray-800 rounded-xl overflow-hidden opacity-70 hover:opacity-100 transition-opacity">
+                    <div class="aspect-w-16 bg-gray-800 flex items-center justify-center">
                         <img src="https://api.dicebear.com/8.x/shapes/svg?seed=SEO&scale=85&radius=10&backgroundType=gradientLinear&backgroundColor=22c55e,0c111d" alt="AI SEO Helper" class="w-full h-48 object-cover">
-                        <span class="absolute text-white font-bold text-lg font-bangla">শীঘ্রই আসছে...</span>
+                        <span class="absolute text-white font-bold text-xl font-bangla bg-black/50 px-3 py-1 rounded">COMING SOON</span>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-3">AI SEO Helper</h3>
-                        <p class="text-gray-300 font-bangla text-sm mb-4 h-16">আপনার ভিডিওর জন্য সেরা টাইটেল, ডেসক্রিপশন এবং ট্যাগ খুঁজে বের করুন।</p>
-                        <div class="flex items-baseline justify-between my-4">
-                             <p class="text-3xl font-bold text-green-400">৳TBA <span class="text-lg font-normal text-gray-400">/ মাস</span></p>
-                        </div>
-                        <!-- Disabled button -->
-                        <a href="#" class="cursor-not-allowed block w-full bg-gray-700 text-gray-400 font-bold text-center py-3 px-6 mt-4 rounded-lg">
-                            শীঘ্রই আসছে
-                        </a>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-gray-400 mb-2 uppercase">AI SEO HELPER</h3>
+                        <p class="text-gray-500 font-bangla text-xs mb-3">ভিডিওর জন্য সেরা টাইটেল, ডেসক্রিপশন এবং ট্যাগ খুঁজে বের করুন।</p>
+                        <p class="text-xl font-bold text-gray-600">৳TBA</p>
+                        <button class="w-full bg-gray-800 text-gray-500 font-bold py-2 mt-3 rounded cursor-not-allowed">শীঘ্রই আসছে</button>
                     </div>
                 </div>
 
             </div>
         </section>
-        <!-- --- END ADDED --- -->
+        <!-- --- END MODIFIED SECTION --- -->
 
         <section id="upcoming-courses" class="mb-20">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 font-bangla breathing-heading"><span class="text-cyan-400">শীঘ্রই</span> আসছে</h2>
@@ -788,7 +828,7 @@
             const scrambleText = (element, newText) => { const chars = '!<>-_\\/[]{}—=+*^?#________'; let frame = 0; const frameRate = 20; const duration = 500; const totalFrames = duration / frameRate; const interval = setInterval(() => { let scrambled = ''; for (let i = 0; i < newText.length; i++) { const progress = frame / totalFrames; if (i < newText.length * progress) { scrambled += newText[i]; } else { scrambled += chars[Math.floor(Math.random() * chars.length)]; } } element.textContent = scrambled; frame++; if (frame >= totalFrames) { clearInterval(interval); element.textContent = newText; } }, frameRate); };
             setInterval(() => { motivationalTextElement.classList.add('exiting'); motivationalTextElement.classList.remove('active'); setTimeout(() => { phraseIndex = (phraseIndex + 1) % motivationalPhrases.length; motivationalTextElement.classList.remove('exiting'); scrambleText(motivationalTextElement, motivationalPhrases[phraseIndex]); motivationalTextElement.classList.add('active'); }, 500); }, 5000);
 
-            // ***** UPDATED: Script for Interactive Image/FAQ fader *****
+            // Script for Interactive Image/FAQ fader
             const imageFader = () => {
                 const card = document.querySelector('.published-card-glow');
                 if (!card) return;
@@ -801,7 +841,6 @@
                 let fadeInterval;
 
                 const startFading = () => {
-                    // Clear any existing interval to prevent duplicates
                     clearInterval(fadeInterval);
                     fadeInterval = setInterval(() => {
                         if (isFaqVisible) {
@@ -822,10 +861,8 @@
                     isFaqVisible = true;
                 };
 
-                // Start the animation automatically
                 startFading();
 
-                // Add hover listeners to the parent card
                 card.addEventListener('mouseenter', stopFadingAndShowFaq);
                 card.addEventListener('mouseleave', startFading);
             };
@@ -842,7 +879,6 @@
                 modal.classList.remove('hidden'); loadingState.classList.remove('hidden'); resultState.classList.add('hidden');
                 const courseTitle = "Viral 3D Shorts AI Automation Mastery- Dominate USA Market";
                 
-                // ***** UPDATED PROMPT FOR MORE BELIEVABLE RESPONSE *****
                 const prompt = `You are an AI expert and course reviewer for 'TECH SEEKER ACADEMY'. Your goal is to provide a helpful and professional analysis for potential students from Bangladesh. A user is asking for an expert opinion on the course: '${courseTitle}'.
 
                 Generate a short, positive, and persuasive review from an expert's perspective. Do NOT pretend to be a student who has taken the course. Instead, act as a reviewer analyzing the course's value. Highlight the following benefits for a Bengali audience:
@@ -852,7 +888,7 @@
                 
                 Your response MUST be in a JSON format with 'review_title' and 'review_body' keys. The response MUST be in Bengali (using Bangla script). The title should be catchy and professional, and the body should be analytical and encouraging.`;
 
-                const apiKey = "AIzaSyAz9NgC0LrClIzdouuaNQzbcsDl9h_yUo4";
+                const apiKey = "";
                 const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
                 const payload = { contents: [{ parts: [{ text: prompt }] }], generationConfig: { responseMimeType: "application/json", responseSchema: { type: "OBJECT", properties: { "review_title": { "type": "STRING" }, "review_body": { "type": "STRING" } }, required: ["review_title", "review_body"] } } };
                 try {
@@ -864,7 +900,7 @@
             });
             closeModalBtn.addEventListener('click', () => { modal.classList.add('hidden'); });
             
-            // --- UPDATED: Floating Promo Video Logic ---
+            // --- Floating Promo Video Logic ---
             let promoPlayer;
             const promoVideoContainer = document.getElementById('promo-video');
             const mutePromoBtn = document.getElementById('mute-promo-video');
@@ -877,14 +913,14 @@
                 promoPlayer = new YT.Player('promo-player', {
                     height: '180',
                     width: '320',
-                    videoId: 'Ei4vQgEeKbo', // <-- Your Promo Video ID
+                    videoId: 'Ei4vQgEeKbo',
                     playerVars: {
                         'playsinline': 1,
                         'autoplay': 1, 
                         'controls': 0,
                         'loop': 1,
                         'mute': 1,
-                        'playlist': 'Ei4vQgEeKbo' // for looping
+                        'playlist': 'Ei4vQgEeKbo'
                     },
                     events: {
                         'onReady': onPlayerReady
@@ -948,4 +984,3 @@
 
 </body>
 </html>
-
