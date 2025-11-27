@@ -218,6 +218,25 @@
                 box-shadow: 0 0 15px rgba(34, 197, 94, 0.6), 0 0 25px rgba(34, 197, 94, 0.4);
             }
         }
+
+        /* NEW: Glowing Cyan Button Style */
+        .glowing-cyan-btn {
+            background-color: #06b6d4; /* cyan-500 */
+            box-shadow: 0 0 15px rgba(6, 182, 212, 0.6), 0 0 25px rgba(6, 182, 212, 0.4);
+            animation: glowing-pulse-cyan 2s infinite ease-in-out;
+        }
+
+        @keyframes glowing-pulse-cyan {
+            0% {
+                box-shadow: 0 0 15px rgba(6, 182, 212, 0.6), 0 0 25px rgba(6, 182, 212, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 30px rgba(6, 182, 212, 1), 0 0 50px rgba(6, 182, 212, 0.7);
+            }
+            100% {
+                box-shadow: 0 0 15px rgba(6, 182, 212, 0.6), 0 0 25px rgba(6, 182, 212, 0.4);
+            }
+        }
         
         /* --- Styles for Background Effects --- */
         #three-bg, #combinedCanvas {
@@ -440,25 +459,26 @@
             </div>
         </section>
 
-        <!-- --- MODIFIED: AI Tools Section (Updated Glow, Text, Colors, Images) --- -->
+        <!-- --- MODIFIED: AI Tools Section (Updated Colors and Sizing) --- -->
         <section id="ai-tools" class="mb-20">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 font-bangla breathing-heading"><span class="text-green-400">AI</span> টুলস</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
                 <!-- Card 1: Ultimate AI Automationer (COMBO) -->
-                <div class="bg-gray-900 rounded-xl overflow-hidden card-glow tool-card-glow flex flex-col relative border border-green-900">
+                <!-- CHANGED: Border color to Cyan (from Green) -->
+                <div class="bg-gray-900 rounded-xl overflow-hidden card-glow tool-card-glow flex flex-col relative border border-cyan-500">
                     <div class="absolute top-0 right-0 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg z-10 animate-pulse">BEST VALUE</div>
-                    <div class="aspect-w-16 bg-black">
+                    <div class="h-48 bg-black">
                         <!-- Video or Main Image -->
-                        <iframe src="https://www.youtube.com/embed/Ei4vQgEeKbo?controls=1&rel=0&playsinline=1&modestbranding=1" title="Ultimate Tool" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/Ei4vQgEeKbo?controls=1&rel=0&playsinline=1&modestbranding=1" title="Ultimate Tool" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-full"></iframe>
                     </div>
 
                     <div class="p-5 flex-grow flex flex-col">
                         <h3 class="text-2xl font-bold text-cyan-400 mb-2 uppercase">ULTIMATE AI AUTOMATIONER</h3>
                         <p class="text-gray-300 font-bangla text-sm mb-3">এটি একটি অল-ইন-ওয়ান অটোমেশন টুল, যা আপনার কনটেন্ট তৈরির ৮০% কাজ কমিয়ে দেবে!</p>
                         
-                        <!-- Combo Offer Text - Updated Glow for Clarity -->
+                        <!-- Combo Offer Text -->
                         <div class="bg-gray-800/50 p-3 rounded-lg border border-purple-500/30 mb-4">
                             <p class="text-xs text-gray-400 font-bold mb-1">🔥 স্পেশাল কম্বো অফার - সাথে ফ্রি পাচ্ছেন:</p>
                             <ul class="text-sm font-bold space-y-1">
@@ -475,7 +495,8 @@
                             <div class="flex items-baseline justify-between mb-4">
                                 <p class="text-3xl font-bold text-green-400">৳২,৯৯৯ <span class="text-sm font-normal text-gray-400">/ লাইফটাইম</span></p>
                             </div>
-                            <a href="uaa-payment.html" class="block w-full text-white font-bold text-center py-3 rounded-lg glowing-green-btn transition-transform transform hover:scale-105 font-bangla">
+                            <!-- CHANGED: Button Class to glowing-cyan-btn (Defined in Style) -->
+                            <a href="uaa-payment.html" class="block w-full text-white font-bold text-center py-3 rounded-lg glowing-cyan-btn transition-transform transform hover:scale-105 font-bangla">
                                 বিস্তারিত দেখুন এবং সাবস্ক্রিপশন কিনুন
                             </a>
                         </div>
@@ -483,9 +504,8 @@
                 </div>
 
                 <!-- Card 2: Voice & Script Studio (Single) -->
-                <div class="bg-gray-900 rounded-xl overflow-hidden card-glow tool-card-glow flex flex-col border-t-4 border-cyan-500">
-                    <div class="aspect-w-16 bg-black">
-                        <!-- Updated Image Name: voice_tool.png -->
+                <div class="bg-gray-900 rounded-xl overflow-hidden card-glow tool-card-glow flex flex-col border-t-4 border-orange-500">
+                    <div class="h-48 bg-black">
                         <img src="voice_tool.png" onerror="this.onerror=null;this.src='https://placehold.co/800x450/0c111d/22d3ee.png?text=Voice+Studio';" alt="Voice & Script Studio" class="object-cover w-full h-full">
                     </div>
                     <div class="p-5 flex-grow flex flex-col">
@@ -496,7 +516,7 @@
                             <div class="flex items-baseline justify-between mb-4">
                                 <p class="text-3xl font-bold text-white">৳৪৯৯ <span class="text-sm font-normal text-gray-400">/ লাইফটাইম</span></p>
                             </div>
-                            <a href="voice-payment.html" class="block w-full bg-cyan-600 hover:bg-cyan-700 text-white font-bold text-center py-3 rounded-lg transition-all font-bangla">
+                            <a href="voice-payment.html" class="block w-full bg-orange-600 hover:bg-orange-700 text-white font-bold text-center py-3 rounded-lg transition-all font-bangla">
                                 এখনই কিনুন
                             </a>
                         </div>
@@ -504,9 +524,8 @@
                 </div>
 
                 <!-- Card 3: Prompt to Image Unlimited (Single) -->
-                <div class="bg-gray-900 rounded-xl overflow-hidden card-glow tool-card-glow flex flex-col border-t-4 border-purple-500">
-                    <div class="aspect-w-16 bg-black">
-                        <!-- Updated Image Name: image_tool.png -->
+                <div class="bg-gray-900 rounded-xl overflow-hidden card-glow tool-card-glow flex flex-col border-t-4 border-green-500">
+                    <div class="h-48 bg-black">
                         <img src="image_tool.png" onerror="this.onerror=null;this.src='https://placehold.co/800x450/0c111d/a855f7.png?text=Image+Tool';" alt="Prompt to Image Unlimited" class="object-cover w-full h-full">
                     </div>
                     <div class="p-5 flex-grow flex flex-col">
@@ -517,18 +536,19 @@
                             <div class="flex items-baseline justify-between mb-4">
                                 <p class="text-3xl font-bold text-white">৳৪৯৯ <span class="text-sm font-normal text-gray-400">/ লাইফটাইম</span></p>
                             </div>
-                            <a href="image-payment.html" class="block w-full bg-purple-600 hover:bg-purple-700 text-white font-bold text-center py-3 rounded-lg transition-all font-bangla">
+                            <a href="image-payment.html" class="block w-full bg-green-600 hover:bg-green-700 text-white font-bold text-center py-3 rounded-lg transition-all font-bangla">
                                 এখনই কিনুন
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- TBA Cards (Moved Down) -->
+                <!-- TBA Cards (Moved Down & Resized) -->
                 <!-- Card 4: AI Thumbnail Generator -->
                 <div class="bg-gray-900/60 border border-gray-800 rounded-xl overflow-hidden opacity-70 hover:opacity-100 transition-opacity">
-                    <div class="aspect-w-16 bg-gray-800 flex items-center justify-center">
-                        <img src="https://api.dicebear.com/8.x/shapes/svg?seed=Thumbnail&scale=85&radius=10&backgroundType=gradientLinear&backgroundColor=22c55e,0c111d" alt="AI Thumbnail Generator" class="w-full h-48 object-cover">
+                    <!-- CHANGED: Replaced aspect-w-16 with h-48 to match other cards -->
+                    <div class="h-48 bg-gray-800 flex items-center justify-center relative">
+                        <img src="https://api.dicebear.com/8.x/shapes/svg?seed=Thumbnail&scale=85&radius=10&backgroundType=gradientLinear&backgroundColor=22c55e,0c111d" alt="AI Thumbnail Generator" class="w-full h-full object-cover opacity-50">
                         <span class="absolute text-white font-bold text-xl font-bangla bg-black/50 px-3 py-1 rounded">COMING SOON</span>
                     </div>
                     <div class="p-5">
@@ -541,8 +561,9 @@
 
                 <!-- Card 5: AI SEO Helper -->
                 <div class="bg-gray-900/60 border border-gray-800 rounded-xl overflow-hidden opacity-70 hover:opacity-100 transition-opacity">
-                    <div class="aspect-w-16 bg-gray-800 flex items-center justify-center">
-                        <img src="https://api.dicebear.com/8.x/shapes/svg?seed=SEO&scale=85&radius=10&backgroundType=gradientLinear&backgroundColor=22c55e,0c111d" alt="AI SEO Helper" class="w-full h-48 object-cover">
+                    <!-- CHANGED: Replaced aspect-w-16 with h-48 to match other cards -->
+                    <div class="h-48 bg-gray-800 flex items-center justify-center relative">
+                        <img src="https://api.dicebear.com/8.x/shapes/svg?seed=SEO&scale=85&radius=10&backgroundType=gradientLinear&backgroundColor=22c55e,0c111d" alt="AI SEO Helper" class="w-full h-full object-cover opacity-50">
                         <span class="absolute text-white font-bold text-xl font-bangla bg-black/50 px-3 py-1 rounded">COMING SOON</span>
                     </div>
                     <div class="p-5">
@@ -632,11 +653,13 @@
     <script src="https://www.youtube.com/iframe_api"></script>
 
     <script>
+        // --- Three.js Background Animation ---
         window.addEventListener('load', function() {
             let scene, camera, renderer, clock, stars;
             const spaceObjects = [];
             const meteors = [];
             const asteroids = [];
+            
             const textureUrls = {
                 moon: 'https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/textures/planets/moon_1024.jpg',
                 earth: 'https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/textures/planets/earth_atmos_2048.jpg',
@@ -660,7 +683,14 @@
                 renderer.setSize(window.innerWidth, window.innerHeight);
                 renderer.setPixelRatio(window.devicePixelRatio);
                 container.appendChild(renderer.domElement);
-                const objectsToCreate = [{ texture: textureUrls.moon, size: 80, pos: new THREE.Vector3(-200, 0, -300) }, { texture: textureUrls.earth, size: 120, pos: new THREE.Vector3(300, 50, -600) }, { texture: textureUrls.lava, size: 50, pos: new THREE.Vector3(-400, 150, -800) }, { texture: textureUrls.neptune, size: 100, pos: new THREE.Vector3(500, -150, -1000) }];
+                
+                const objectsToCreate = [
+                    { texture: textureUrls.moon, size: 80, pos: new THREE.Vector3(-200, 0, -300) },
+                    { texture: textureUrls.earth, size: 120, pos: new THREE.Vector3(300, 50, -600) },
+                    { texture: textureUrls.lava, size: 50, pos: new THREE.Vector3(-400, 150, -800) },
+                    { texture: textureUrls.neptune, size: 100, pos: new THREE.Vector3(500, -150, -1000) }
+                ];
+
                 objectsToCreate.forEach(obj => {
                     const material = new THREE.MeshStandardMaterial({ map: textureLoader.load(obj.texture), roughness: 0.9 });
                     const spaceObject = new THREE.Mesh(new THREE.SphereGeometry(obj.size, 64, 64), material);
@@ -669,8 +699,10 @@
                     spaceObjects.push(spaceObject);
                     scene.add(spaceObject);
                 });
+
                 const asteroidGeometry = new THREE.DodecahedronGeometry(1, 0);
                 const asteroidMaterial = new THREE.MeshStandardMaterial({ map: textureLoader.load(textureUrls.asteroid), roughness: 0.8, metalness: 0.5 });
+                
                 for (let i = 0; i < 500; i++) {
                     const asteroid = new THREE.Mesh(asteroidGeometry, asteroidMaterial);
                     const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(2000));
@@ -680,9 +712,12 @@
                     asteroids.push(asteroid);
                     scene.add(asteroid);
                 }
+
                 const starVertices = [];
                 for (let i = 0; i < 25000; i++) {
-                    const x = (Math.random() - 0.5) * 4000; const y = (Math.random() - 0.5) * 4000; const z = (Math.random() - 0.5) * 4000;
+                    const x = (Math.random() - 0.5) * 4000;
+                    const y = (Math.random() - 0.5) * 4000;
+                    const z = (Math.random() - 0.5) * 4000;
                     starVertices.push(x, y, z);
                 }
                 const starGeometry = new THREE.BufferGeometry();
@@ -690,18 +725,22 @@
                 const starMaterial = new THREE.PointsMaterial({ color: 0xffffff, size: 1.5 });
                 stars = new THREE.Points(starGeometry, starMaterial);
                 scene.add(stars);
+
                 const ambientLight = new THREE.AmbientLight(0x404040, 1.0);
                 scene.add(ambientLight);
                 const directionalLight = new THREE.DirectionalLight(0xffffff, 1.5);
                 directionalLight.position.set(300, 100, 200);
                 scene.add(directionalLight);
+                
                 window.addEventListener('resize', onWindowResize, false);
             }
+
             function onWindowResize() {
                 camera.aspect = window.innerWidth / window.innerHeight;
                 camera.updateProjectionMatrix();
                 renderer.setSize(window.innerWidth, window.innerHeight);
             }
+
             function createMeteor() {
                 const meteor = new THREE.Mesh(new THREE.SphereGeometry(0.5, 8, 8), new THREE.MeshBasicMaterial({ color: 0xfff5b0 }));
                 const trail = new THREE.Line(new THREE.BufferGeometry(), new THREE.LineBasicMaterial({ color: 0xfff5b0, opacity: 0.6, transparent: true }));
@@ -711,26 +750,33 @@
                 scene.add(meteor);
                 meteors.push(meteor);
             }
+
             function animateThree() {
                 requestAnimationFrame(animateThree);
                 const elapsedTime = clock.getElapsedTime();
                 spaceObjects.forEach(obj => { obj.rotation.y += 0.001; });
                 stars.rotation.y += 0.0001;
                 asteroids.forEach(asteroid => { asteroid.rotation.x += 0.001; asteroid.rotation.y += 0.002; });
+                
                 if (Math.random() < 0.03) { createMeteor(); }
+                
                 meteors.forEach((meteor, index) => {
                     meteor.position.add(meteor.velocity);
                     const trailPoints = [new THREE.Vector3(0, 0, 0), meteor.velocity.clone().multiplyScalar(-10)];
                     meteor.children[0].geometry.setFromPoints(trailPoints);
                     if (meteor.position.z > 500) { scene.remove(meteor); meteors.splice(index, 1); }
                 });
+
                 camera.position.z -= 0.2;
                 camera.position.x = Math.sin(elapsedTime * 0.1) * 100;
                 camera.position.y = 50 + Math.cos(elapsedTime * 0.1) * 50;
                 camera.lookAt(new THREE.Vector3(0, 0, -500));
+                
                 if (camera.position.z < -1000) { camera.position.z = 500; }
+                
                 renderer.render(scene, camera);
             }
+
             initThree();
             animateThree();
         });
@@ -750,85 +796,199 @@
                 let hue = 120;
                 const orbiterParticles = [];
                 const numOrbiterParticles = 30;
+
                 window.addEventListener('mousemove', (event) => {
                     mouse.x = event.x; mouse.y = event.y;
                     for (let i = 0; i < 3; i++) { auroraParticles.push(new AuroraParticle(mouse.x, mouse.y)); }
                 });
+
                 class AuroraParticle {
                     constructor(x, y) { this.x = x; this.y = y; this.size = Math.random() * 2 + 1; this.speedX = Math.random() * 2 - 1; this.speedY = Math.random() * 2 - 1; this.color = `hsl(${hue}, 100%, 50%)`; this.life = 1; this.history = []; }
                     update() { this.history.unshift({ x: this.x, y: this.y }); if (this.history.length > 20) { this.history.pop(); } this.x += this.speedX + (Math.random() - 0.5) * 2; this.y += this.speedY + (Math.random() - 0.5) * 2; this.life -= 0.01; }
                     draw() { ctx.beginPath(); if (this.history.length > 1) { ctx.moveTo(this.history[0].x, this.history[0].y); for (let i = 1; i < this.history.length; i++) { ctx.lineTo(this.history[i].x, this.history[i].y); } ctx.lineWidth = this.size; ctx.strokeStyle = this.color; ctx.globalAlpha = this.life; ctx.stroke(); } ctx.globalAlpha = 1; }
                 }
+
                 class OrbiterParticle {
                     constructor(index) { this.index = index; this.angle = (index / numOrbiterParticles) * Math.PI * 2; this.radius = 25 + Math.random() * 15; this.x = mouse.x + Math.cos(this.angle) * this.radius; this.y = mouse.y + Math.sin(this.angle) * this.radius; this.size = Math.random() * 2 + 1; this.color = colors[Math.floor(Math.random() * colors.length)]; this.speed = 0.05 + Math.random() * 0.02; this.history = []; }
                     update() { this.history.unshift({ x: this.x, y: this.y }); if (this.history.length > 10) { this.history.pop(); } this.angle += this.speed; const targetX = mouse.x + Math.cos(this.angle) * this.radius; const targetY = mouse.y + Math.sin(this.angle) * this.radius; this.x += (targetX - this.x) * 0.1; this.y += (targetY - this.y) * 0.1; }
                     draw() { for (let i = 0; i < this.history.length; i++) { const pos = this.history[i]; const opacity = 1 - (i / this.history.length); ctx.beginPath(); ctx.arc(pos.x, pos.y, this.size * (1 - i / this.history.length), 0, Math.PI * 2); ctx.fillStyle = this.color; ctx.globalAlpha = opacity * 0.5; ctx.fill(); } ctx.globalAlpha = 1; ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2); ctx.fillStyle = this.color; ctx.shadowColor = this.color; ctx.shadowBlur = 15; ctx.fill(); ctx.shadowBlur = 0; }
                 }
+
                 function initAurora() { for (let i = 0; i < numOrbiterParticles; i++) { orbiterParticles.push(new OrbiterParticle(i)); } }
                 function animateAurora() { ctx.clearRect(0, 0, canvas.width, canvas.height); for (let i = auroraParticles.length - 1; i >= 0; i--) { const p = auroraParticles[i]; p.update(); p.draw(); if (p.life <= 0) { auroraParticles.splice(i, 1); } } orbiterParticles.forEach(p => { p.update(); p.draw(); }); hue = (hue + 0.5) % 360; requestAnimationFrame(animateAurora); }
+                
                 initAurora();
                 animateAurora();
                 window.addEventListener('resize', () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; });
             }
 
-            // --- Original Page Logic ---
+            // --- Countdown Logic ---
             const countdown = () => {
-                const countDate = new Date(); countDate.setDate(countDate.getDate() + 2);
-                const timerElement = document.getElementById('timer'); if (!timerElement) return;
+                const countDate = new Date(); 
+                countDate.setDate(countDate.getDate() + 2);
+                const timerElement = document.getElementById('timer'); 
+                if (!timerElement) return;
+                
                 const interval = setInterval(() => {
-                    const now = new Date().getTime(); const distance = countDate - now;
-                    if (distance < 0) { clearInterval(interval); timerElement.innerHTML = "অফারটি শেষ হয়ে গেছে"; return; }
-                    const days = Math.floor(distance / 86400000); const hours = Math.floor((distance % 86400000) / 3600000); const minutes = Math.floor((distance % 3600000) / 60000); const seconds = Math.floor((distance % 60000) / 1000);
+                    const now = new Date().getTime(); 
+                    const distance = countDate - now;
+                    if (distance < 0) { 
+                        clearInterval(interval); 
+                        timerElement.innerHTML = "অফারটি শেষ হয়ে গেছে"; 
+                        return; 
+                    }
+                    const days = Math.floor(distance / 86400000); 
+                    const hours = Math.floor((distance % 86400000) / 3600000); 
+                    const minutes = Math.floor((distance % 3600000) / 60000); 
+                    const seconds = Math.floor((distance % 60000) / 1000);
                     timerElement.innerHTML = `অফার শেষ হচ্ছে: ${days} দিন ${hours} ঘন্টা ${minutes} মিনিট ${seconds} সেকেন্ড`;
                 }, 1000);
             };
             countdown();
 
+            // --- Purchase Counter ---
             const purchaseCounter = () => {
-                const counterElement = document.getElementById('purchase-counter'); if (!counterElement) return;
+                const counterElement = document.getElementById('purchase-counter'); 
+                if (!counterElement) return;
+                
                 let purchaseCount = localStorage.getItem('purchaseCount');
                 if (purchaseCount === null) { 
                     purchaseCount = 59;
-                } else { purchaseCount = parseInt(purchaseCount); }
-                const updateCounter = () => { counterElement.innerHTML = `🔥 <strong>${purchaseCount}</strong> জন ইতিমধ্যে কোর্সটি কিনেছেন!`; counterElement.classList.add('counter-pop'); setTimeout(() => counterElement.classList.remove('counter-pop'), 600); };
+                } else { 
+                    purchaseCount = parseInt(purchaseCount); 
+                }
+                
+                const updateCounter = () => { 
+                    counterElement.innerHTML = `🔥 <strong>${purchaseCount}</strong> জন ইতিমধ্যে কোর্সটি কিনেছেন!`; 
+                    counterElement.classList.add('counter-pop'); 
+                    setTimeout(() => counterElement.classList.remove('counter-pop'), 600); 
+                };
+                
                 updateCounter();
-                const lastIncrementTime = localStorage.getItem('lastIncrementTime'); const currentTime = new Date().getTime(); const fourHours = 14400000;
-                if (!lastIncrementTime || (currentTime - lastIncrementTime > fourHours)) { purchaseCount++; localStorage.setItem('purchaseCount', purchaseCount); localStorage.setItem('lastIncrementTime', currentTime); updateCounter(); }
-                setInterval(() => { const newTime = new Date().getTime(); if (newTime - localStorage.getItem('lastIncrementTime') > fourHours) { let currentCount = parseInt(localStorage.getItem('purchaseCount')); currentCount++; localStorage.setItem('purchaseCount', currentCount); localStorage.setItem('lastIncrementTime', newTime); purchaseCount = currentCount; updateCounter(); } }, 60000);
+                
+                const lastIncrementTime = localStorage.getItem('lastIncrementTime'); 
+                const currentTime = new Date().getTime(); 
+                const fourHours = 14400000;
+                
+                if (!lastIncrementTime || (currentTime - lastIncrementTime > fourHours)) { 
+                    purchaseCount++; 
+                    localStorage.setItem('purchaseCount', purchaseCount); 
+                    localStorage.setItem('lastIncrementTime', currentTime); 
+                    updateCounter(); 
+                }
+                
+                setInterval(() => { 
+                    const newTime = new Date().getTime(); 
+                    if (newTime - localStorage.getItem('lastIncrementTime') > fourHours) { 
+                        let currentCount = parseInt(localStorage.getItem('purchaseCount')); 
+                        currentCount++; 
+                        localStorage.setItem('purchaseCount', currentCount); 
+                        localStorage.setItem('lastIncrementTime', newTime); 
+                        purchaseCount = currentCount; 
+                        updateCounter(); 
+                    } 
+                }, 60000);
             };
             purchaseCounter();
 
+            // --- Audio Logic ---
             let isAudioReady = false;
-            const synth = new Tone.Synth({ oscillator: { type: 'sine' }, envelope: { attack: 0.005, decay: 0.1, sustain: 0.3, release: 1 } }).toDestination();
-            const gearSynth = new Tone.PolySynth({
-                voice: Tone.FMSynth,
-                options: {
-                    harmonicity: 5.1,
-                    modulationIndex: 3.1,
-                    detune: 0,
-                    oscillator: { type: "sine" },
-                    envelope: { attack: 0.001, decay: 0.1, sustain: 0.01, release: 0.1 },
-                    modulation: { type: "square" },
-                    modulationEnvelope: { attack: 0.002, decay: 0.2, sustain: 0, release: 0.2 }
-                }
-            }).toDestination();
-            const initializeAudio = async () => { if (!isAudioReady) { await Tone.start(); isAudioReady = true; console.log("Audio context started!"); } };
+            let synth, gearSynth;
+            
+            try {
+                synth = new Tone.Synth({ oscillator: { type: 'sine' }, envelope: { attack: 0.005, decay: 0.1, sustain: 0.3, release: 1 } }).toDestination();
+                gearSynth = new Tone.PolySynth({
+                    voice: Tone.FMSynth,
+                    options: {
+                        harmonicity: 5.1,
+                        modulationIndex: 3.1,
+                        detune: 0,
+                        oscillator: { type: "sine" },
+                        envelope: { attack: 0.001, decay: 0.1, sustain: 0.01, release: 0.1 },
+                        modulation: { type: "square" },
+                        modulationEnvelope: { attack: 0.002, decay: 0.2, sustain: 0, release: 0.2 }
+                    }
+                }).toDestination();
+            } catch (e) {
+                console.log("Audio initialization skipped");
+            }
+
+            const initializeAudio = async () => { 
+                if (!isAudioReady) { 
+                    await Tone.start(); 
+                    isAudioReady = true; 
+                    console.log("Audio context started!"); 
+                } 
+            };
             document.body.addEventListener('click', initializeAudio, { once: true });
             document.body.addEventListener('touchstart', initializeAudio, { once: true });
 
             const headerLetters = document.querySelectorAll('.header-title .letter');
-            headerLetters.forEach(letter => { letter.addEventListener('mouseenter', () => { if (!isAudioReady) return; gearSynth.triggerAttackRelease("C4", "32n"); }); });
+            headerLetters.forEach(letter => { 
+                letter.addEventListener('mouseenter', () => { 
+                    if (!isAudioReady || !gearSynth) return; 
+                    gearSynth.triggerAttackRelease("C4", "32n"); 
+                }); 
+            });
 
             const clickableElements = document.querySelectorAll('.course-link, #askGptBtn, #closeModalBtn');
-            clickableElements.forEach(link => { link.addEventListener('click', (e) => { if (isAudioReady) { synth.triggerAttackRelease("C4", "8n"); } if (link.tagName === 'A' && link.getAttribute('href') && link.getAttribute('href') !== '#') { e.preventDefault(); document.body.classList.add('page-exit'); const destination = link.getAttribute('href'); setTimeout(() => { window.location.assign(destination); }, 500); } }); });
+            clickableElements.forEach(link => { 
+                link.addEventListener('click', (e) => { 
+                    if (isAudioReady && synth) { 
+                        synth.triggerAttackRelease("C4", "8n"); 
+                    } 
+                    if (link.tagName === 'A' && link.getAttribute('href') && link.getAttribute('href') !== '#') { 
+                        e.preventDefault(); 
+                        document.body.classList.add('page-exit'); 
+                        const destination = link.getAttribute('href'); 
+                        setTimeout(() => { window.location.assign(destination); }, 500); 
+                    } 
+                }); 
+            });
             
+            // --- Motivational Text Scrambler ---
             const motivationalTextElement = document.getElementById('motivationalText');
             const motivationalPhrases = ["আপনার স্কিল ডেভেলপমেন্টের সেরা ঠিকানা", "ছাত্র বয়স থেকে ইনকাম শুরু করা বুদ্ধিমানের কাজ।", "ভাবছেন আপনার স্কিল নেই? স্কিল শিখবেন এখানেই।", "বাবার কাছে হাত না পেতে, বাবাকে টাকা দিন।", "নিজের পায়ে দাঁড়ান, এখন AI এর স্বর্ণযুগ চলছে।", "এখন শুরু না করলে, ২-৪ বছর পর বিশাল প্রতিযোগিতায় পড়বেন।", "তখন মনে হবে, 'ইস! যদি ২ বছর আগে শুরু করতাম!'"];
             let phraseIndex = 0;
-            const scrambleText = (element, newText) => { const chars = '!<>-_\\/[]{}—=+*^?#________'; let frame = 0; const frameRate = 20; const duration = 500; const totalFrames = duration / frameRate; const interval = setInterval(() => { let scrambled = ''; for (let i = 0; i < newText.length; i++) { const progress = frame / totalFrames; if (i < newText.length * progress) { scrambled += newText[i]; } else { scrambled += chars[Math.floor(Math.random() * chars.length)]; } } element.textContent = scrambled; frame++; if (frame >= totalFrames) { clearInterval(interval); element.textContent = newText; } }, frameRate); };
-            setInterval(() => { motivationalTextElement.classList.add('exiting'); motivationalTextElement.classList.remove('active'); setTimeout(() => { phraseIndex = (phraseIndex + 1) % motivationalPhrases.length; motivationalTextElement.classList.remove('exiting'); scrambleText(motivationalTextElement, motivationalPhrases[phraseIndex]); motivationalTextElement.classList.add('active'); }, 500); }, 5000);
+            
+            const scrambleText = (element, newText) => { 
+                const chars = '!<>-_\/[]{}—=+*^?#________'; 
+                let frame = 0; 
+                const frameRate = 20; 
+                const duration = 500; 
+                const totalFrames = duration / frameRate; 
+                
+                const interval = setInterval(() => { 
+                    let scrambled = ''; 
+                    for (let i = 0; i < newText.length; i++) { 
+                        const progress = frame / totalFrames; 
+                        if (i < newText.length * progress) { 
+                            scrambled += newText[i]; 
+                        } else { 
+                            scrambled += chars[Math.floor(Math.random() * chars.length)]; 
+                        } 
+                    } 
+                    element.textContent = scrambled; 
+                    frame++; 
+                    if (frame >= totalFrames) { 
+                        clearInterval(interval); 
+                        element.textContent = newText; 
+                    } 
+                }, frameRate); 
+            };
+            
+            setInterval(() => { 
+                motivationalTextElement.classList.add('exiting'); 
+                motivationalTextElement.classList.remove('active'); 
+                setTimeout(() => { 
+                    phraseIndex = (phraseIndex + 1) % motivationalPhrases.length; 
+                    motivationalTextElement.classList.remove('exiting'); 
+                    scrambleText(motivationalTextElement, motivationalPhrases[phraseIndex]); 
+                    motivationalTextElement.classList.add('active'); 
+                }, 500); 
+            }, 5000);
 
-            // Script for Interactive Image/FAQ fader
+            // --- Image/FAQ Fader ---
             const imageFader = () => {
                 const card = document.querySelector('.published-card-glow');
                 if (!card) return;
@@ -851,7 +1011,7 @@
                             courseImage.style.opacity = '0';
                         }
                         isFaqVisible = !isFaqVisible;
-                    }, 2000); // Toggles every 2 seconds
+                    }, 2000); 
                 };
 
                 const stopFadingAndShowFaq = () => {
@@ -868,6 +1028,7 @@
             };
             imageFader();
             
+            // --- GPT Modal Logic ---
             const askGptBtn = document.getElementById('askGptBtn');
             const modal = document.getElementById('suggestionModal');
             const closeModalBtn = document.getElementById('closeModalBtn');
@@ -875,32 +1036,57 @@
             const resultState = document.getElementById('resultState');
             const reviewTitleEl = document.getElementById('reviewTitle');
             const reviewBodyEl = document.getElementById('reviewBody');
-            askGptBtn.addEventListener('click', async () => {
-                modal.classList.remove('hidden'); loadingState.classList.remove('hidden'); resultState.classList.add('hidden');
-                const courseTitle = "Viral 3D Shorts AI Automation Mastery- Dominate USA Market";
-                
-                const prompt = `You are an AI expert and course reviewer for 'TECH SEEKER ACADEMY'. Your goal is to provide a helpful and professional analysis for potential students from Bangladesh. A user is asking for an expert opinion on the course: '${courseTitle}'.
-
-                Generate a short, positive, and persuasive review from an expert's perspective. Do NOT pretend to be a student who has taken the course. Instead, act as a reviewer analyzing the course's value. Highlight the following benefits for a Bengali audience:
-                - The strategic value of targeting the US YouTube market.
-                - The innovation of using free AI tools for high-quality 3D animation, removing financial barriers like expensive PCs or software.
-                - The course's structure as a complete, step-by-step guide (A to Z method).
-                
-                Your response MUST be in a JSON format with 'review_title' and 'review_body' keys. The response MUST be in Bengali (using Bangla script). The title should be catchy and professional, and the body should be analytical and encouraging.`;
-
-                const apiKey = "";
-                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
-                const payload = { contents: [{ parts: [{ text: prompt }] }], generationConfig: { responseMimeType: "application/json", responseSchema: { type: "OBJECT", properties: { "review_title": { "type": "STRING" }, "review_body": { "type": "STRING" } }, required: ["review_title", "review_body"] } } };
-                try {
-                    const response = await fetch(apiUrl, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
-                    if (!response.ok) { throw new Error(`API request failed with status ${response.status}`); }
-                    const result = await response.json();
-                    if (result.candidates && result.candidates.length > 0 && result.candidates[0].content.parts.length > 0) { const text = result.candidates[0].content.parts[0].text; const suggestion = JSON.parse(text); reviewTitleEl.textContent = suggestion.review_title; reviewBodyEl.textContent = suggestion.review_body; } else { throw new Error("Invalid response structure from API"); }
-                } catch (error) { console.error("Error fetching course suggestion:", error); reviewTitleEl.textContent = "ত্রুটি"; reviewBodyEl.textContent = "দুঃখিত, এই মুহূর্তে কোনো মতামত তৈরি করা সম্ভব হচ্ছে না। অনুগ্রহ করে কিছুক্ষণ পর আবার চেষ্টা করুন।"; } finally { loadingState.classList.add('hidden'); resultState.classList.remove('hidden'); }
-            });
-            closeModalBtn.addEventListener('click', () => { modal.classList.add('hidden'); });
             
-            // --- Floating Promo Video Logic ---
+            if (askGptBtn) {
+                askGptBtn.addEventListener('click', async () => {
+                    modal.classList.remove('hidden'); 
+                    loadingState.classList.remove('hidden'); 
+                    resultState.classList.add('hidden');
+                    
+                    const courseTitle = "Viral 3D Shorts AI Automation Mastery- Dominate USA Market";
+                    const prompt = `You are an AI expert and course reviewer for 'TECH SEEKER ACADEMY'. Your goal is to provide a helpful and professional analysis for potential students from Bangladesh. A user is asking for an expert opinion on the course: '${courseTitle}'. Generate a short, positive, and persuasive review from an expert's perspective. Do NOT pretend to be a student who has taken the course. Instead, act as a reviewer analyzing the course's value. Highlight the following benefits for a Bengali audience: - The strategic value of targeting the US YouTube market. - The innovation of using free AI tools for high-quality 3D animation, removing financial barriers like expensive PCs or software. - The course's structure as a complete, step-by-step guide (A to Z method). Your response MUST be in a JSON format with 'review_title' and 'review_body' keys. The response MUST be in Bengali (using Bangla script). The title should be catchy and professional, and the body should be analytical and encouraging.`;
+
+                    const apiKey = ""; // API Key is empty as per request context
+                    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+                    
+                    const payload = { 
+                        contents: [{ parts: [{ text: prompt }] }], 
+                        generationConfig: { 
+                            responseMimeType: "application/json", 
+                            responseSchema: { 
+                                type: "OBJECT", 
+                                properties: { "review_title": { "type": "STRING" }, "review_body": { "type": "STRING" } }, 
+                                required: ["review_title", "review_body"] 
+                            } 
+                        } 
+                    };
+                    
+                    try {
+                        const response = await fetch(apiUrl, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+                        if (!response.ok) { throw new Error(`API request failed with status ${response.status}`); }
+                        const result = await response.json();
+                        if (result.candidates && result.candidates.length > 0 && result.candidates[0].content.parts.length > 0) { 
+                            const text = result.candidates[0].content.parts[0].text; 
+                            const suggestion = JSON.parse(text); 
+                            reviewTitleEl.textContent = suggestion.review_title; 
+                            reviewBodyEl.textContent = suggestion.review_body; 
+                        } else { throw new Error("Invalid response structure from API"); }
+                    } catch (error) { 
+                        console.error("Error fetching course suggestion:", error); 
+                        reviewTitleEl.textContent = "ত্রুটি"; 
+                        reviewBodyEl.textContent = "দুঃখিত, এই মুহূর্তে কোনো মতামত তৈরি করা সম্ভব হচ্ছে না। অনুগ্রহ করে কিছুক্ষণ পর আবার চেষ্টা করুন।"; 
+                    } finally { 
+                        loadingState.classList.add('hidden'); 
+                        resultState.classList.remove('hidden'); 
+                    }
+                });
+            }
+            
+            if (closeModalBtn) {
+                closeModalBtn.addEventListener('click', () => { modal.classList.add('hidden'); });
+            }
+            
+            // --- Promo Video Logic ---
             let promoPlayer;
             const promoVideoContainer = document.getElementById('promo-video');
             const mutePromoBtn = document.getElementById('mute-promo-video');
