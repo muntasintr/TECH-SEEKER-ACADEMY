@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <title>Prompt to Image - Access Link</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body { 
+            font-family: 'Hind Siliguri', sans-serif; 
+            background-color: #000; 
+            color: white; 
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        /* Adjusted Green Glow for clarity */
+        .text-glow-green { 
+            text-shadow: 0 0 5px #10b981, 0 0 10px #10b981; /* Emerald/Teal Green */
+        } 
+        .contact-icon { 
+            width: 20px; 
+            height: 20px; 
+        }
+
+        /* Container for content distribution */
+        .content-container {
+            max-width: 1200px; /* Wider content area */
+            margin-left: auto;
+            margin-right: auto;
+            padding: 2rem 1rem;
+            flex-grow: 1; 
+            display: flex;
+            flex-direction: column;
+            gap: 2rem; 
+        }
+
+        /* Specific styles for cards/sections to spread out */
+        .info-card, .warning-card {
+            background-color: rgba(17, 24, 39, 0.8); /* Darker, slightly transparent */
+            border-radius: 0.75rem; /* rounded-xl */
+            padding: 1.5rem; /* p-6 */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+            backdrop-filter: blur(5px); /* Subtle blur behind cards */
+        }
+        .warning-card {
+            border: 2px solid rgba(239, 68, 68, 0.7); /* Red border */
+            background-color: rgba(185, 28, 28, 0.2); /* Slightly red background */
+        }
+        /* Instruction card border/background set to Green */
+        .instruction-card {
+            border: 2px solid rgba(16, 185, 129, 0.7); /* Emerald/Teal Green border */
+            background-color: rgba(16, 185, 129, 0.15); /* Emerald/Teal Green background */
+        }
+
+        /* List item text size is set to base (1rem) for uniformity */
+        .instruction-card ul li {
+            font-size: 1rem; /* Base font size */
+        }
+        /* Note text size is set to base font size for better visibility */
+        .instruction-card ul li p {
+            font-size: 1rem; /* Base font size, increased visibility */
+            margin-top: 0.25rem;
+            padding-left: 0; 
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div class="content-container">
+
+        <!-- Header Section --><header class="text-center mb-8">
+            <!-- CHANGED: Header color to Green-400 -->
+            <h1 class="text-5xl md:text-6xl font-bold text-green-400 mb-4 text-glow-green">UAA PROMPT TO IMAGE UNLIMITED</h1>
+            <p class="text-gray-300 text-xl md:text-2xl">অভিনন্দন! আপনার পেমেন্ট সফল হয়েছে। অ্যাপটি অ্যাক্টিভ করতে নিচের নির্দেশনা অনুসরণ করুন।</p>
+        </header>
+
+        <!-- Main Access Button --><div class="text-center my-8">
+             <!-- CHANGED: Access Link Updated -->
+             <a href="https://ai.studio/apps/drive/1s_txnz80Z6iFa5ImeO2OXKCCgqmO0j5u?fullscreenApplet=true" target="_blank" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-5 px-16 rounded-full transition-all transform hover:scale-105 shadow-2xl shadow-green-900/50 text-2xl animate-pulse">
+                 অ্যাপটি চালু করুন 🎨
+             </a>
+        </div>
+        
+        <!-- Warning and Instructions Section --><div class="grid grid-cols-1 lg:grid-cols-2 gap-8 my-8">
+            <!-- SECURITY WARNING BLOCK --><div class="info-card warning-card text-left text-red-300">
+                <h3 class="font-bold text-xl text-red-100 mb-3">🚫 অত্যন্ত জরুরী সতর্কতা:</h3>
+                <p class="font-bangla leading-relaxed text-base">এই **অ্যাক্সেস লিংকটি শুধুমাত্র আপনার ব্যবহারের জন্য**। যদি এটি অন্য কারো সাথে শেয়ার করা হয় অথবা সিস্টেম বাইপাস করার চেষ্টা করা হয়, তাহলে **সিস্টেম স্বয়ংক্রিয়ভাবে আপনার অ্যাকাউন্ট লক করে দেবে**। একবার লক হয়ে গেলে, আপনাকে আর কোনো অ্যাক্সেস বা রিফান্ড দেওয়া হবে না। আপনার অ্যাক্সেস সুরক্ষিত রাখুন।</p>
+            </div>
+            
+            <!-- Important Instructions -->
+            <div class="info-card instruction-card text-left text-green-300">
+                <h3 class="font-bold text-xl text-green-100 mb-3">গুরুত্বপূর্ণ নির্দেশনা (অ্যাক্টিভেশন প্রক্রিয়া):</h3>
+                <ul class="list-disc list-inside ml-2 space-y-2 text-base">
+                    <li class="font-bangla">অ্যাপটি ওপেন করার পর প্রথমে আপনার **নাম** লিখুন।</li>
+                    <li class="font-bangla">এরপর আপনার **Gmail এড্রেস** লিখুন।
+                        <p class="text-base text-green-400 mt-1">
+                            *প্রতিটি অ্যাপের জন্য Gmail এড্রেস **আলাদা** হতে হবে। প্রয়োজনে আপনার Gmail এর শেষে `1`, `2`, `3` ইত্যাদি যোগ করুন (যেমন: `example+1@gmail.com`)।
+                        </p>
+                    </li>
+                    <li class="font-bangla">এরপর আপনার **ফোন নাম্বার** দিন।</li>
+                    <li class="font-bangla">তারপর **"Register"** বাটনে ক্লিক করুন।</li>
+                    <li class="font-bangla">রেজিস্টার সফল হলে নিচের **Telegram** অথবা **WhatsApp** এ আমাকে একটি মেসেজ দিন। আপনাকে **অ্যাক্টিভেশন** দিয়ে দেওয়া হবে।</li>
+                    <li class="font-bangla">আপনাকে **অ্যাক্টিভেশন** দিয়ে দেওয়ার পরে আপনি সেইম ইনফরমেশনগুলো দিয়ে **Login** এ ক্লিক করুন। অ্যাপটি লগইন হয়ে যাবে।</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Contact Section --><div class="text-center my-8">
+            <p class="text-xl text-gray-400 mb-6">Need Help? Contact Developer:</p>
+            <div class="flex justify-center flex-wrap gap-6">
+                
+                <a href="https://wa.me/message/K4UWIP55B2XGP1" target="_blank" class="flex items-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full transition-all transform hover:scale-105 shadow-md shadow-green-900/50 text-lg">
+                    <i class="fab fa-whatsapp contact-icon mr-3"></i> WhatsApp
+                </a>
+                
+                <a href="https://t.me/tasints" target="_blank" class="flex items-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full transition-all transform hover:scale-105 shadow-md shadow-blue-900/50 text-lg">
+                    <i class="fab fa-telegram-plane contact-icon mr-3"></i> Telegram
+                </a>
+                
+                <a href="https://web.facebook.com/messages/t/106696837796420/" target="_blank" class="flex items-center bg-blue-800 hover:bg-blue-900 text-white font-bold py-3 px-6 rounded-full transition-all transform hover:scale-105 shadow-md shadow-blue-900/50 text-lg">
+                    <i class="fab fa-facebook contact-icon mr-3"></i> Facebook
+                </a>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="text-center text-gray-600 text-sm mt-auto py-4">
+            <p>এই অ্যাক্সেস লিংকটি অন্য কারো সাথে শেয়ার করবেন না।</p>
+            <p>&copy; 2025 Tech Seeker Academy. All Rights Reserved.</p>
+        </footer>
+    </div>
+    
+</body>
+</html>
