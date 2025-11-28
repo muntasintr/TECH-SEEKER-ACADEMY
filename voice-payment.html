@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice & Script Studio - Payment | Tech Seeker Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body { font-family: 'Poppins', 'Hind Siliguri', sans-serif; background-color: #0c111d; color: #E5E7EB; }
+        .font-bangla { font-family: 'Hind Siliguri', sans-serif; }
+        .feature-icon { color: #f97316; } /* Orange Icon */
+        
+        /* Custom Styles mimicking the screenshot */
+        .glow-green { text-shadow: 0 0 10px rgba(34, 197, 94, 0.8), 0 0 20px rgba(34, 197, 94, 0.4); }
+        .glow-blue { text-shadow: 0 0 10px rgba(59, 130, 246, 0.5); }
+        
+        /* Send Money Glow Animation */
+        .text-pulse-glow {
+            animation: textGlowPulse 1.5s infinite alternate;
+        }
+        @keyframes textGlowPulse {
+            from { text-shadow: 0 0 5px rgba(34, 197, 94, 0.5); transform: scale(1); }
+            to { text-shadow: 0 0 20px rgba(34, 197, 94, 1), 0 0 10px #fff; transform: scale(1.05); }
+        }
+
+        /* Price Box Pulse & Scale Animation */
+        /* ঝাপসা ভাব দূর করতে 'will-change' এবং 'backface-visibility' ব্যবহার করা হয়েছে */
+        .box-pulse-animation {
+            animation: boxPulseScale 3s infinite ease-in-out;
+            will-change: transform, box-shadow;
+            -webkit-font-smoothing: antialiased;
+            backface-visibility: hidden;
+            transform: translateZ(0);
+        }
+        @keyframes boxPulseScale {
+            0%, 100% { 
+                transform: scale(1) translateY(0); 
+                box-shadow: 0 0 20px rgba(249, 115, 22, 0.2); 
+                border-color: rgba(249, 115, 22, 0.8);
+            }
+            50% { 
+                transform: scale(1.05) translateY(-5px); 
+                box-shadow: 0 0 50px rgba(249, 115, 22, 0.5); 
+                border-color: rgba(249, 115, 22, 1);
+            }
+        }
+
+        /* Input autofill fix for dark theme */
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover, 
+        input:-webkit-autofill:focus, 
+        input:-webkit-autofill:active{
+            -webkit-box-shadow: 0 0 0 30px #111827 inset !important;
+            -webkit-text-fill-color: white !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+    <div class="container mx-auto px-4 py-12">
+        <div class="max-w-4xl mx-auto bg-black rounded-xl shadow-2xl shadow-orange-500/10 border border-gray-800 overflow-hidden fade-in">
+            
+            <!-- Header Banner (Updated Icon) -->
+            <div class="bg-gradient-to-r from-orange-900/40 to-black p-8 text-center border-b border-orange-900/30">
+                <h1 class="text-3xl md:text-4xl font-bold text-orange-500 font-bangla mb-3 flex justify-center items-center gap-3">
+                    <i class="fas fa-microphone-lines text-4xl"></i> <!-- Updated Icon -->
+                    UAA Voice & Script Studio
+                </h1>
+                <p class="text-xl text-gray-300 font-bangla">আপনার গল্পকে দিন এক নতুন কণ্ঠ!</p>
+            </div>
+
+            <div class="p-6 md:p-10">
+                <!-- Introduction -->
+                <div class="mb-10 text-center">
+                    <p class="text-gray-300 text-lg leading-relaxed font-bangla">
+                        আপনার কি একটি অসামান্য ভয়েসওভার বা স্ক্রিপ্ট দরকার? <strong class="text-orange-400">UAA Voice & Script Studio</strong> আপনার সৃজনশীলতাকে দেবে সীমাহীন ডানা! কৃত্রিম বুদ্ধিমত্তার (AI) অত্যাধুনিক প্রযুক্তিতে তৈরি এই টুলের মাধ্যমে পেশাদারী কণ্ঠস্বর তৈরি এখন আপনার হাতের মুঠোয়।
+                    </p>
+                </div>
+
+                <!-- Features Grid -->
+                <h2 class="text-2xl font-bold text-center text-white mb-8 font-bangla border-b border-gray-800 pb-4">✨ কেন এটি আপনার সেরা পছন্দ? ✨</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 font-bangla mb-10">
+                    <!-- Feature 1 -->
+                    <div class="bg-gray-900 p-5 rounded-lg border border-gray-800 hover:border-orange-500/50 transition-colors group">
+                        <h3 class="text-lg font-bold text-orange-400 mb-2 group-hover:text-orange-300 transition-colors"><i class="fas fa-plug feature-icon mr-2"></i> API Key-এর ঝামেলা নেই!</h3>
+                        <p class="text-sm text-gray-400">অন্যান্য প্ল্যাটফর্মের মতো API Key সেটআপ বা ব্যবহারের সীমাবদ্ধতা নেই। একবার কিনুন, আর ইচ্ছামতো ব্যবহার করুন—কোনো লুকানো খরচ ছাড়াই!</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="bg-gray-900 p-5 rounded-lg border border-gray-800 hover:border-orange-500/50 transition-colors group">
+                        <h3 class="text-lg font-bold text-orange-400 mb-2 group-hover:text-orange-300 transition-colors"><i class="fas fa-language feature-icon mr-2"></i> বাংলা ভাষার বিশেষ সমর্থন! 🇧🇩</h3>
+                        <p class="text-sm text-gray-400">অনায়াসে বাংলা ভাষায় স্ক্রিপ্ট লিখুন এবং AI সেটিকে আকর্ষণীয় ভয়েসওভারে রূপান্তরিত করবে। আপনার বাংলা কনটেন্ট পাবে নতুন মাত্রা।</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="bg-gray-900 p-5 rounded-lg border border-gray-800 hover:border-orange-500/50 transition-colors group">
+                        <h3 class="text-lg font-bold text-orange-400 mb-2 group-hover:text-orange-300 transition-colors"><i class="fas fa-file-alt feature-icon mr-2"></i> ৪০,০০০ শব্দ পর্যন্ত স্ক্রিপ্ট</h3>
+                        <p class="text-sm text-gray-400">ছোট বার্তা থেকে শুরু করে দীর্ঘ ডকুমেন্টারি বা অডিওবুক—সবকিছুই ৪০,০০০ শব্দ পর্যন্ত অনায়াসে তৈরি করতে পারবেন।</p>
+                    </div>
+                    <!-- Feature 4 -->
+                    <div class="bg-gray-900 p-5 rounded-lg border border-gray-800 hover:border-orange-500/50 transition-colors group">
+                        <h3 class="text-lg font-bold text-orange-400 mb-2 group-hover:text-orange-300 transition-colors"><i class="fas fa-brain feature-icon mr-2"></i> AI Story Refiner & Ideas</h3>
+                        <p class="text-sm text-gray-400">যেকোনো ভিডিওর স্ক্রিপ্ট কপিরাইট ফ্রি করুন বা ১০টি নতুন ইউনিক অ্যাঙ্গেলে টপিক জেনারেট করুন। ডকুমেন্টারির জন্য সেরা!</p>
+                    </div>
+                    <!-- Feature 5 -->
+                    <div class="bg-gray-900 p-5 rounded-lg border border-gray-800 hover:border-orange-500/50 transition-colors group">
+                        <h3 class="text-lg font-bold text-orange-400 mb-2 group-hover:text-orange-300 transition-colors"><i class="fas fa-microphone-alt feature-icon mr-2"></i> ৭০+ কণ্ঠস্বর ও স্মার্ট ম্যাচিং</h3>
+                        <p class="text-sm text-gray-400">৭০টিরও বেশি নারী ও পুরুষের কণ্ঠস্বর। অডিও স্যাম্পল আপলোড করলে AI ৭০টি ভয়েস থেকে সবচেয়ে কাছাকাছি টোনের ভয়েসটি অটোমেটিক সেট করে দেবে।</p>
+                    </div>
+                    <!-- Feature 6 -->
+                    <div class="bg-gray-900 p-5 rounded-lg border border-gray-800 hover:border-orange-500/50 transition-colors group">
+                        <h3 class="text-lg font-bold text-orange-400 mb-2 group-hover:text-orange-300 transition-colors"><i class="fas fa-sliders-h feature-icon mr-2"></i> আবেগ ও গতি নিয়ন্ত্রণ</h3>
+                        <p class="text-sm text-gray-400">খুশি, দুঃখ, রাগ বা অনুপ্রেরণামূলক—যেকোনো আবেগে ভয়েস তৈরি করুন এবং গতি (Speed) নিয়ন্ত্রণ করুন।</p>
+                    </div>
+                    <!-- Feature 7 -->
+                    <div class="bg-gray-900 p-5 rounded-lg border border-gray-800 hover:border-orange-500/50 transition-colors group">
+                        <h3 class="text-lg font-bold text-orange-400 mb-2 group-hover:text-orange-300 transition-colors"><i class="fas fa-magic feature-icon mr-2"></i> স্মার্ট স্ক্রিপ্ট প্রসেসর</h3>
+                        <p class="text-sm text-gray-400">অপ্রয়োজনীয় টেক্সট বাদ দেওয়া, ন্যাচারাল পজ (Pause) যোগ করা এবং গল্পের ভাব বুঝে অটোমেটিক ইমোশন (হাসি, কান্না, দীর্ঘশ্বাস ইত্যাদি) সেট করার সুবিধা।</p>
+                    </div>
+                    <!-- Feature 8 -->
+                    <div class="bg-gray-900 p-5 rounded-lg border border-gray-800 hover:border-orange-500/50 transition-colors group">
+                        <h3 class="text-lg font-bold text-orange-400 mb-2 group-hover:text-orange-300 transition-colors"><i class="fas fa-download feature-icon mr-2"></i> পডকাস্ট ও ডাউনলোড</h3>
+                        <p class="text-sm text-gray-400">দুইজন বক্তার (Host & Guest) পডকাস্ট মোড। এক ক্লিকে সম্পূর্ণ হাই-কোয়ালিটি .wav অডিও এবং রিফাইন করা স্ক্রিপ্ট আলাদাভাবে ডাউনলোড।</p>
+                    </div>
+                </div>
+
+                <!-- Price Section (Updated Animation & Spacing) -->
+                <div class="text-center mb-16 mt-8">
+                    <div class="inline-block bg-gray-900/90 border-2 border-orange-500 rounded-2xl p-8 md:px-16 pt-12 relative box-pulse-animation">
+                        <!-- Static Badge -->
+                        <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-red-600 text-white text-sm font-bold px-6 py-2 rounded-full uppercase tracking-wider shadow-lg">Limited Time Offer</div>
+                        
+                        <!-- Added mt-2 for Spacing -->
+                        <p class="text-gray-400 text-base font-bangla mb-2 mt-2">লাইফটাইম অ্যাক্সেস ফি</p>
+                        <p class="text-6xl font-bold text-white tracking-tight">৳৪৯৯</p>
+                        <p class="text-orange-400 text-sm mt-3 font-bangla font-semibold tracking-wide">(একবার পেমেন্ট, আজীবন ব্যবহার)</p>
+                    </div>
+                </div>
+
+                <!-- ================= PAYMENT SECTION START ================= -->
+                <div class="font-bangla pt-10">
+                    
+                    <!-- Header -->
+                    <div class="text-center mb-6">
+                        <h2 class="text-3xl font-bold text-green-500 glow-green">পেমেন্ট করার নিয়মাবলী</h2>
+                        <div class="h-[1px] w-full bg-gray-700 mt-4"></div>
+                    </div>
+                    
+                    <div class="text-gray-300 mb-6 text-sm md:text-base">
+                        <p>লাইফটাইম সাবস্ক্রিপশন ফি <span class="text-green-400 font-bold">৳৪৯৯</span> নিচের নিয়মে Send Money করতে হবে।</p>
+                    </div>
+                    
+                    <!-- Payment Number Box -->
+                    <div class="bg-gray-800 p-6 rounded-lg text-center mb-8 border border-gray-700">
+                        <p class="text-gray-300 text-sm mb-2">Bkash/Rocket/Nagad Number:</p>
+                        <div class="flex items-center justify-center gap-4">
+                            <p id="paymentNumber" class="text-3xl md:text-4xl font-bold text-cyan-400 tracking-wider">01774108214</p>
+                            <!-- Big Copy Button -->
+                            <button onclick="copyNumber()" id="copyBtn" class="bg-cyan-600 hover:bg-cyan-500 text-white text-base font-bold px-5 py-2 rounded-full transition-all transform hover:scale-110 shadow-lg">Copy</button>
+                        </div>
+                        <p class="text-sm mt-3 text-gray-400">(Payment Method: <span class="text-green-400 font-bold text-lg text-pulse-glow">Send Money</span> - Personal)</p>
+                    </div>
+
+                    <!-- Instructions List -->
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold text-cyan-400 mb-3 glow-blue">টাকা পাঠানোর পর করণীয়:</h3>
+                        <ul class="list-disc list-inside space-y-3 text-gray-300 text-sm md:text-base pl-2">
+                            <li>টাকা পাঠানো সফল হলে, পেমেন্টের একটি স্পষ্ট <span class="text-yellow-400 font-bold">স্ক্রিনশট</span> নিন।</li>
+                            <li>নিচের বক্স থেকে আপনার নাম, ইমেইল ও ফোন নম্বর পূরণ করে <span class="text-yellow-400 font-bold">"তথ্য কপি করুন"</span> বাটনে ক্লিক করুন।</li>
+                            <li class="text-green-400 font-bold text-lg glow-green p-2 rounded bg-gray-800/50">সবশেষে, কপি করা তথ্য এবং পেমেন্টের স্ক্রিনশটটি একসাথে নিচের যেকোনো একটি মাধ্যমে পাঠিয়ে দিন।</li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Buttons (Interactive) -->
+                    <div class="space-y-4 mb-10">
+                        <a href="https://web.facebook.com/messages/t/106696837796420/" target="_blank" class="block w-full bg-blue-700 hover:bg-blue-600 text-white font-bold py-4 rounded-lg text-center transition-all shadow-lg shadow-blue-900/50 transform hover:scale-105 hover:shadow-blue-500/50">
+                            <i class="fab fa-facebook-messenger mr-2"></i> ফেসবুক পেজে মেসেজ দিন
+                        </a>
+                        <a href="https://wa.me/message/K4UWIP55B2XGP1" target="_blank" class="block w-full bg-green-600 hover:bg-green-500 text-white font-bold py-4 rounded-lg text-center transition-all shadow-lg shadow-green-900/50 transform hover:scale-105 hover:shadow-green-500/50">
+                            <i class="fab fa-whatsapp mr-2"></i> হোয়াটসঅ্যাপে মেসেজ দিন
+                        </a>
+                        <a href="https://t.me/tasints" target="_blank" class="block w-full bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-4 rounded-lg text-center transition-all shadow-lg shadow-cyan-900/50 transform hover:scale-105 hover:shadow-cyan-500/50">
+                            <i class="fab fa-telegram-plane mr-2"></i> টেলিগ্রামে মেসেজ দিন
+                        </a>
+                    </div>
+
+                    <!-- Information Form -->
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold text-cyan-400 mb-3 glow-blue">আপনার তথ্য পূরণ করুন:</h3>
+                        <div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                            <p class="text-xs font-bold text-gray-500 mb-4">TOOL ID: UAA-VOICE-01</p>
+                            
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="block text-gray-400 text-xs font-bold mb-1 uppercase">YOUR NAME:</label>
+                                    <input type="text" id="userName" placeholder="আপনার সম্পূর্ণ নাম লিখুন" class="w-full bg-gray-900 border border-gray-600 rounded p-3 text-white focus:outline-none focus:border-cyan-500 text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-400 text-xs font-bold mb-1 uppercase">YOUR E-mail:</label>
+                                    <input type="email" id="userEmail" placeholder="আপনার ইমেইল অ্যাড্রেস" class="w-full bg-gray-900 border border-gray-600 rounded p-3 text-white focus:outline-none focus:border-cyan-500 text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-400 text-xs font-bold mb-1 uppercase">YOUR Mobile No:</label>
+                                    <input type="tel" id="userMobile" placeholder="আপনার ফোন নম্বর" class="w-full bg-gray-900 border border-gray-600 rounded p-3 text-white focus:outline-none focus:border-cyan-500 text-sm">
+                                </div>
+                            </div>
+
+                            <button onclick="copyDetails()" id="copyMsgBtn" class="w-full bg-cyan-700 hover:bg-cyan-600 text-white font-bold py-4 rounded-lg mt-6 transition-all shadow-lg transform hover:scale-105 hover:shadow-cyan-500/50">
+                                তথ্য কপি করুন
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Footer Warning Box -->
+                    <div class="border border-yellow-600 bg-yellow-900/20 p-4 rounded-lg text-center">
+                        <p class="text-yellow-400 text-sm font-semibold">
+                            আপনার পেমেন্ট যাচাই করার পর আপনাকে টুলের অ্যাক্সেস লিংক পাঠিয়ে দেওয়া হবে (সাধারণত ৩০ মিনিটের মধ্যে)। যেকোনো প্রশ্ন থাকলে ইনবক্সে যোগাযোগ করুন এবং লাইফটাইম সাবস্ক্রিপশন ফি দেওয়ার আগে, জেনে বুঝে তারপর পেমেন্ট করুন।
+                        </p>
+                        <p class="text-yellow-500 font-bold mt-2 text-lg">ধন্যবাদ!</p>
+                    </div>
+
+                </div>
+                <!-- ================= PAYMENT SECTION END ================= -->
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // নিরাপদ কপি ফাংশন (Fallback সহ)
+        function secureCopy(text, btnElement, successText = "Copied!", resetText = "Copy") {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text)
+                    .then(() => {
+                        updateBtnUI(btnElement, successText, resetText);
+                    })
+                    .catch(err => {
+                        console.warn('Clipboard API failed, trying fallback...', err);
+                        fallbackCopy(text, btnElement, successText, resetText);
+                    });
+            } else {
+                fallbackCopy(text, btnElement, successText, resetText);
+            }
+        }
+
+        function fallbackCopy(text, btnElement, successText, resetText) {
+            try {
+                const textArea = document.createElement("textarea");
+                textArea.value = text;
+                textArea.style.position = "fixed";
+                textArea.style.left = "-9999px";
+                textArea.style.top = "0";
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                const successful = document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                if (successful) {
+                    updateBtnUI(btnElement, successText, resetText);
+                } else {
+                    alert("কপি করা সম্ভব হয়নি। দয়া করে ম্যানুয়ালি কপি করুন।");
+                }
+            } catch (err) {
+                console.error("Fallback copy failed", err);
+                alert("কপি করা সম্ভব হয়নি। দয়া করে ম্যানুয়ালি কপি করুন।");
+            }
+        }
+
+        function updateBtnUI(btn, successText, resetText) {
+            const originalText = resetText;
+            const originalHTML = btn.innerHTML; // Store icon/html
+            
+            btn.innerText = successText;
+            
+            // গ্রিন কালার ইফেক্ট
+            const originalClasses = btn.className;
+            btn.classList.remove('bg-orange-600', 'hover:bg-orange-700', 'bg-cyan-600', 'hover:bg-cyan-500', 'bg-cyan-700', 'hover:bg-cyan-600');
+            btn.classList.add('bg-green-600', 'hover:bg-green-700');
+            
+            setTimeout(() => {
+                btn.innerHTML = originalHTML; // Restore original HTML (with icons if any)
+                btn.classList.remove('bg-green-600', 'hover:bg-green-700');
+                
+                if (btn.id === 'copyBtn') {
+                    btn.classList.add('bg-cyan-600', 'hover:bg-cyan-500');
+                } else {
+                    btn.classList.add('bg-cyan-700', 'hover:bg-cyan-600');
+                }
+            }, 3000);
+        }
+
+        function copyNumber() {
+            const btn = document.getElementById('copyBtn');
+            secureCopy("01774108214", btn, "Copied!", "Copy");
+        }
+
+        function copyDetails() {
+            const name = document.getElementById('userName').value;
+            const email = document.getElementById('userEmail').value;
+            const mobile = document.getElementById('userMobile').value;
+            
+            if(!name || !email || !mobile) {
+                alert("অনুগ্রহ করে সব তথ্য পূরণ করুন");
+                return;
+            }
+
+            const text = `TOOL: Voice & Script Studio (499tk)\nName: ${name}\nEmail: ${email}\nMobile: ${mobile}`;
+            const btn = document.getElementById('copyMsgBtn');
+            
+            secureCopy(text, btn, "কপি হয়েছে!", "তথ্য কপি করুন");
+        }
+    </script>
+</body>
+</html>
