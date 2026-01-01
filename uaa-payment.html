@@ -26,7 +26,7 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1128526625555144');
     fbq('track', 'PageView');
-    fbq('track', 'ViewContent'); // Tracks viewing of the payment page
+    fbq('track', 'ViewContent');
     </script>
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=1128526625555144&ev=PageView&noscript=1"
@@ -51,27 +51,26 @@
         @keyframes text-spark { 0%, 100% { text-shadow: none; } 50% { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #22d3ee, 0 0 80px #22d3ee; } }
         @keyframes header-border-spark { 0%, 100% { border-color: transparent; box-shadow: none; } 50% { border-color: #22d3ee; box-shadow: 0 0 20px #22d3ee, inset 0 0 10px #22d3ee; } }
         
-        /* Green Glow for specific highlights */
-        .highlight-glow { animation: glowing-text-green 2s infinite ease-in-out; color: #4ade80; /* Brighter green */ }
+        /* Glow Effects */
+        .highlight-glow { animation: glowing-text-green 2s infinite ease-in-out; color: #4ade80; }
         @keyframes glowing-text-green { 0% { text-shadow: 0 0 5px rgba(74, 222, 128, 0.4); } 50% { text-shadow: 0 0 15px rgba(74, 222, 128, 1), 0 0 25px rgba(74, 222, 128, 0.8); } 100% { text-shadow: 0 0 5px rgba(74, 222, 128, 0.4); } }
         
-        /* Cyan Glow for Page Heading */
         .page-heading-glow { animation: glowing-text-cyan 3s infinite ease-in-out; color: #22d3ee; }
         @keyframes glowing-text-cyan { 0% { text-shadow: 0 0 5px rgba(34, 211, 238, 0.3); } 50% { text-shadow: 0 0 20px rgba(34, 211, 238, 0.8), 0 0 30px rgba(34, 211, 238, 0.5); } 100% { text-shadow: 0 0 5px rgba(34, 211, 238, 0.3); } }
 
-        /* Styling for description */
-        .tool-description h2 { font-size: 1.75rem; /* text-2xl */ font-weight: bold; color: #f97316; /* text-orange-500 */ margin-top: 1.5rem; /* mt-6 */ margin-bottom: 0.75rem; /* mb-3 */ }
-        .tool-description h3 { font-size: 1.25rem; /* text-xl */ font-weight: bold; color: #22d3ee; /* text-cyan-400 */ margin-top: 1.5rem; /* Increased top margin */ margin-bottom: 0.75rem; }
-        .tool-description p { margin-bottom: 1rem; /* mb-4 */ line-height: 1.75; /* leading-relaxed */ }
-        .tool-description ul { list-style-type: disc; margin-left: 1.5rem; /* ml-6 */ margin-bottom: 1rem; /* mb-4 */ padding-left: 1rem; /* Added padding */ }
-        .tool-description li { margin-bottom: 0.5rem; /* mb-2 */ }
-        .tool-description strong { color: #facc15; /* text-yellow-400 */ }
+        /* Description Styles */
+        .tool-description h2 { font-size: 1.75rem; font-weight: bold; color: #f97316; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+        .tool-description h3 { font-size: 1.25rem; font-weight: bold; color: #22d3ee; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+        .tool-description p { margin-bottom: 1rem; line-height: 1.75; }
+        .tool-description ul { list-style-type: disc; margin-left: 1.5rem; margin-bottom: 1rem; padding-left: 1rem; }
+        .tool-description li { margin-bottom: 0.5rem; }
+        .tool-description strong { color: #facc15; }
         
-        /* YouTube Video Grid */
-        .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; /* gap-6 */ }
-        .video-placeholder { position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0; background-color: #1f2937; /* bg-gray-800 */ border-radius: 0.5rem; /* rounded-lg */ overflow: hidden; border: 1px solid #374151; /* border-gray-700 */ }
+        /* Video Grid */
+        .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .video-placeholder { position: relative; padding-bottom: 56.25%; height: 0; background-color: #1f2937; border-radius: 0.5rem; overflow: hidden; border: 1px solid #374151; }
         .video-placeholder iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-        .video-placeholder-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #9ca3af; /* text-gray-400 */ text-align: center; }
+        .video-placeholder-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #9ca3af; text-align: center; }
 
     </style>
 </head>
@@ -156,30 +155,52 @@
                 <section class="mt-12">
                     <h2 class="text-3xl font-bold text-cyan-400 mb-6 text-center font-bangla">এই টুল ব্যবহার করে তৈরি করা ভিডিও</h2>
                     <div class="video-grid">
+                        
                         <div class="video-placeholder">
-                             <iframe src="https://www.youtube.com/embed/pbNPEoe1k5U" title="HOW TO USE TOOL AND NISHED MASTER COURSE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                             <iframe src="https://www.youtube.com/embed/pbNPEoe1k5U" title="How To Use Tool" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
 
                         <div class="video-placeholder">
-                             <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1499956354638341&show_text=false&width=560" title="ISLAMIC NISH VIDEO" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                             <iframe src="https://www.youtube.com/embed/gSkAXGZcEE4" title="USA Channel Roadmap" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
 
                         <div class="video-placeholder">
-                             <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fwatch%2F%3Fv%3D1871807230091625&show_text=false&width=560" title="THE END OF THE WORLD EYES OF ISRAFIL" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                             <iframe src="https://www.youtube.com/embed/nKfQRhqJtlA" title="Shorts Video 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
 
                         <div class="video-placeholder">
-                             <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F24706138715725753&show_text=false&width=560" title="Facebook Reel" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            <iframe src="https://www.youtube.com/embed/RoZGzBKC4KU" title="Shorts Video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
 
                         <div class="video-placeholder">
-                            <div class="video-placeholder-text">শীঘ্রই আসছে...</div>
+                             <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fwatch%2F%3Fv%3D1871807230091625&show_text=false&width=560" title="Facebook Video 1" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                         </div>
-                         <div class="video-placeholder">
-                            <div class="video-placeholder-text">শীঘ্রই আসছে...</div>
+
+                        <div class="video-placeholder">
+                             <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fwatch%2F%3Fv%3D24706138715725753&show_text=false&width=560" title="Facebook Video 2" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                         </div>
+
+                        <div class="video-placeholder">
+                            <div class="video-placeholder-text font-bangla text-xl">শীঘ্রই আসছে আরো নতুন নিস</div>
+                        </div>
+                        <div class="video-placeholder">
+                            <div class="video-placeholder-text font-bangla text-xl">শীঘ্রই আসছে আরো নতুন নিস</div>
+                        </div>
+                        <div class="video-placeholder">
+                            <div class="video-placeholder-text font-bangla text-xl">শীঘ্রই আসছে আরো নতুন নিস</div>
+                        </div>
+                        <div class="video-placeholder">
+                            <div class="video-placeholder-text font-bangla text-xl">শীঘ্রই আসছে আরো নতুন নিস</div>
+                        </div>
+                        <div class="video-placeholder">
+                            <div class="video-placeholder-text font-bangla text-xl">শীঘ্রই আসছে আরো নতুন নিস</div>
+                        </div>
+                        <div class="video-placeholder">
+                            <div class="video-placeholder-text font-bangla text-xl">শীঘ্রই আসছে আরো নতুন নিস</div>
+                        </div>
+
                     </div>
-                     </section>
+                 </section>
 
             </div>
 
@@ -311,7 +332,7 @@
                     }, 3000);
                     return;
                 }
-                const messageToCopy = `COURSE NO: TSA-01\nYOUR NAME: ${userName}\nYOUR E-mail: ${userEmail}\nYOUR Mobile No: ${userMobile}`;
+                const messageToCopy = `TOOL ID: UAA-01\nYOUR NAME: ${userName}\nYOUR E-mail: ${userEmail}\nYOUR Mobile No: ${userMobile}`;
                 navigator.clipboard.writeText(messageToCopy).then(() => {
                     copyMessageBtn.innerText = 'কপি করা হয়েছে!';
                     copyMessageBtn.classList.remove('bg-cyan-600', 'hover:bg-cyan-700');
@@ -331,7 +352,6 @@
 
         function trackPurchase() {
             console.log('Purchase Event Fired!');
-            // ফেসবুককে জানানো হচ্ছে যে 2999 টাকার একটি সেল হয়েছে।
             fbq('track', 'Purchase', {value: 2999.00, currency: 'BDT'});
         }
 
@@ -340,4 +360,3 @@
     </script>
 </body>
 </html>
-
